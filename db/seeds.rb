@@ -8,8 +8,10 @@ Restaurant.destroy_all
 puts "Creating restaurants..."
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Restaurant.create(Faker::Name.name  "Tim Rau", Faker::Address.address "Rudy street", Faker::Category.category "chinese")
-Restaurant.create(Faker::Name.name  "Asian Hun", Faker::Address.address "Karlshost street", Faker::Category.category "japanese")
-Restaurant.create(Faker::Name.name  "Burger King", Faker::Address.address "Olympee street", Faker::Category.category "french")
-Restaurant.create(Faker::Name.name  "KFC", Faker::Address.address "Spandau street", Faker::Category.category "chinese")
-Restaurant.create(Faker::Name.name  "Indiana", Faker::Address.address "lichtenrade street", Faker::Category.category "belgian")
+Restaurant.create(name: Faker::Name.name, address: Faker::Address.street_address, category: "chinese")
+Restaurant.create(name: Faker::Name.name, address: Faker::Address.street_address, category: "japanese")
+Restaurant.create(name: Faker::Name.name, address: Faker::Address.street_address, category: "french")
+Restaurant.create(name: Faker::Name.name, address: Faker::Address.street_address, category: "chinese")
+Restaurant.create(name: Faker::Name.name, address: Faker::Address.street_address, category: "belgian")
+
+puts "finished!"
